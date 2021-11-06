@@ -40,8 +40,8 @@ router.put("/:id", async (req, res) => {
     req.params.id,
     {
       name: req.body.name,
-      icon: req.body.name,
-      color: req.body.name,
+      icon: req.body.icon,
+      color: req.body.color,
     },
     { new: true } // para que mueste el nuevo dato actualizado y no el viejo
   );

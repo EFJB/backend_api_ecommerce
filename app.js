@@ -41,6 +41,7 @@ mongoose
     dbName: process.env.DB_NAME,
   })
   .then(() => {
+    console.log("We are using " + process.env.DB_NAME);
     console.log("Database Connection is ready...");
   })
   .catch((err) => {
@@ -49,5 +50,5 @@ mongoose
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log("server is running http://localhost:3000");
+  console.log(`server is running http://localhost:${PORT}`);
 });
